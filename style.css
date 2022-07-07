@@ -1,0 +1,38 @@
+body{
+    padding: 20px 100px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+h1{
+    background-color: rgb(42, 84, 147);
+    color: white;
+    padding: 10px;
+    margin: 0px;
+}
+#text{
+    width: 99.3%;
+    height: 30vh;
+    border: 2px solid rgb(42, 84, 147);;
+    resize: none;
+    font-size: 17px;
+}
+
+p{
+    font-size: 22px;
+    background-color: rgb(42, 84, 147);
+    color: white;
+    padding: 15px;
+    margin: 0px;
+}
+
+/* making responsive */
+@media only screen and (max-width: 500px){
+    body{
+        padding: 10px 10px;
+    }
+    #text{
+        width: 85vw;
+        height: 60vh;
+    }
+
+}

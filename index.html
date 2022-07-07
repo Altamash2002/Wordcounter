@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>
+        Word and Character counter
+    </h1>
+
+    <textarea id="text" cols="30" rows="10"></textarea>
+
+    <p>
+        <span id="words">0</span> Words and <span id="characters">0</span> Characters
+    </p>
+
+
+
+    <script>
+        let text = document.getElementById("text");
+        text.addEventListener('input',function(){
+            let char = this.value;
+            let characters = document.getElementById("characters");
+            characters.innerHTML = char.length;
+
+            let lengthOfWords = char.trim().split(' ');
+
+            // this function stores the array in the cleanList variable and passes element variable as a array list and after doing some functioning returns the array list.
+            let cleanList = lengthOfWords.filter(function(element){
+                return element != "";       
+            });
+
+            let words = document.getElementById('words');
+            words.innerHTML = cleanList.length; 
+            
+        });
+        
+
+    </script>
+</body>
+</html>
